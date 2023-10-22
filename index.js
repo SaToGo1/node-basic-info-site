@@ -11,9 +11,6 @@ const server = http.createServer((req, res) => {
     let filepath = '.' + url.pathname
     if (filepath === './') filepath = './index'
     filepath += '.html' 
-
-    console.log(filepath)
-    console.log('filepath, typeof', typeof filepath)
     
     fs.readFile(filepath, (err, data) => {
         // 404 
